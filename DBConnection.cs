@@ -15,10 +15,14 @@ namespace Singleton
         {
             string connectionString = "Data Source=server;Initial Catalog=database;User ID=username;Password=password";
             connection = new SqlConnection(connectionString);
+
+        }
+
+        public void OpenConnection() 
+        {
             connection.Open();
             Console.WriteLine("The connection is established");
         }
-
         public static DBConnection GetInstance()
         {
             if (instance == null)

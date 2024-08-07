@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             DBConnection sqlConnection = DBConnection.GetInstance();
+            sqlConnection.OpenConnection();
         }
     }
 }
